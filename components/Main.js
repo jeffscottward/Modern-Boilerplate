@@ -1,9 +1,8 @@
 import React from "react";
-
-import { useStateValue } from "../state/state";
+import Global from "../constants/Global";
+const { css } = Global;
 
 const Main = (props) => {
-  const [{ css }, dispatch] = useStateValue();
   return (
     <main>
       {props.children}

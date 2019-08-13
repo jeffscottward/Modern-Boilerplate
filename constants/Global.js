@@ -1,4 +1,5 @@
 const Global = {
+  siteMap: ["/", "settings", "finances"],
   css: {
     colors: {
       state: {
@@ -18,7 +19,8 @@ const Global = {
     someNumber: 25,
     someString: "hello world"
   },
-  siteMap: ["/", "settings", "finances"]
+  user: {},
+  date: {}
 };
 
 export default Global;

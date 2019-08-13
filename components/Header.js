@@ -1,15 +1,15 @@
-import React, {useEffect} from "react";
+import React from "react";
 
 import Nav from './Nav'
 import Link from 'next/link'
 
 import {withRouter} from "next/router";
-import { useStateValue } from "../state/state";
+import Global from "../constants/Global";
+const { css } = Global;
 
 import capitalize from '../utils/capitalize'
 
 const LinkTag = (currentPath, item, indexRouteDefault) => {
-  const [{ css }] = useStateValue();
   return (
     <a
       className={
@@ -40,7 +40,7 @@ const LinkTag = (currentPath, item, indexRouteDefault) => {
 
 const Header = (props) => {
   let Links = []
-  const [{ css, siteMap }, dispatch] = useStateValue();
+  const siteMap = Global.siteMap
   return (
     <header>
       <div className="container">
